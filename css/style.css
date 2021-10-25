@@ -34,7 +34,6 @@ body{
     max-width: 1194px;
     margin: 0 auto;
     padding: 0 10px;
-    outline: 1px solid red;
 }
 .page{
     flex: 1 1 auto;
@@ -86,6 +85,9 @@ body{
     line-height: 114%;
     color: #000000;
 }
+.login:hover{
+    background: #c4c2c2;
+}
 .cart{
     width: 49px;
     height: 49px;
@@ -112,6 +114,7 @@ body{
     right: 0;
     bottom: -6px;
 }
+
 
 /* SLIDER------------------------ */
 .slide {
@@ -145,6 +148,16 @@ body{
     background-size: cover;
 
 }
+.slide__vitamins{
+    background-image: url("../images/slider-vitamins.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slide__autumn{
+    background-image: url("../images/slider-autumn.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .slide__content{
     max-width: 400px;
     position: relative;
@@ -169,8 +182,30 @@ body{
     font-size: 14px;
     line-height: 164%;
     padding: 12px 52px;
+    border: 1px solid transparent;
+    transition: all .3s ease-in-out;
 }
-
+.slider__btn:hover{
+    border: 1px solid #F47322;
+    background: transparent;
+    color: #F47322;
+}
+.swiper{
+    position: relative;
+}
+.slider__buttons{
+    position: absolute;
+    right: 46px;
+    bottom: 40px;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    justify-content: space-between;
+}
+.slider__button{
+    cursor: pointer;
+}
 /* PROMO------------------ */
 .promo {
     padding: 50px 0;
@@ -178,12 +213,12 @@ body{
 .promo__inner {
     display: flex;
     justify-content: space-between;
-    margin: 0px -27px;
+    margin: -27px;
 }
 .promo__item {
     width: 50%;
     max-width: 570px;
-    margin: 0px 27px;
+    margin: 27px;
     color: #fff;
     border-radius: 20px;
     overflow: hidden;
@@ -216,10 +251,6 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* .promo__top,
-.promo__bottom {
-    position: relative;
-} */
 .promo__title{
     margin-bottom: 21px;
 }
@@ -254,6 +285,18 @@ body{
     font-size: 16px;
     line-height: 144%;
     color: #5F5F61;
+    transition: all .3s ease-in-out;
+    border: 1px solid transparent;
+}
+.blue:hover{
+    color:#fff;
+    background: #025775;
+    border: 1px solid #fff;
+}
+.brown:hover{
+    color:#fff;
+    background: #754c2f;
+    border: 1px solid #fff;
 }
 
 /*DELIVERY--------------------  */
@@ -267,14 +310,14 @@ body{
 .delivery-week__title {
     font-weight: 500;
     font-size: 32px;
-    line-height: 272%;
+    line-height: 155%;
     color: #000000;
     margin-bottom: 47px;
 }
 .delivery-week__cards {
     display: flex;
     flex-wrap: wrap;
-    margin:0px -16px;
+    margin:0px -11.5px;
 }
 .delivery-week__card {
     position: relative;
@@ -283,7 +326,7 @@ body{
     border-radius: 18px;
     overflow: hidden;
     margin-bottom: 30px;
-    margin: 0px 16px 30px;
+    margin: 0px 11.5px 30px;
 }
 .delivery-week__img {
     width: 100%;
@@ -356,14 +399,14 @@ body{
 }
 .tabs__content {
     display: flex;
-    margin: 0 -18.5px;
+    margin: -18.5px;
 }
 .tabs__card {
     max-width: 270px;
     border-radius: 20px;
     overflow: hidden;
     background: #fff;
-    margin: 0px 18.5px;
+    margin: 18.5px;
 }
 .tabs__body{
     padding: 23px;
@@ -411,6 +454,11 @@ body{
     border: 2px solid #F37321;
     border-radius: 33px;
     cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.tabs__btn:hover{
+    background: #F37321;
+    color: #fff;
 }
 .tabs-more__btn{
     font-weight: 500;
@@ -423,6 +471,11 @@ body{
     display: block;
     margin: 62px auto 0;
     cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+ .tabs-more__btn:hover{
+    background: #F37321;
+    color: #fff;
 }
 
 /* BENEFITS-------------- */
@@ -441,7 +494,7 @@ body{
 }
 .benefits__items{
     display: flex;
-    margin: 0px -18.5px;
+    margin: 0px -30px;
 }
 .benefits__item {
     background: #FFFFFF;
@@ -453,7 +506,7 @@ body{
     max-width: 270px;
     overflow: hidden;
     text-align: center;
-    margin: 0px 18.5px;
+    margin: 0px 30px;
 }
 .benefits__icon {
     margin-bottom: 36px;
@@ -477,7 +530,7 @@ body{
     background: #F6F6F6;
     padding: 40px 0;
 }
-.logo{
+.footer__logo{
     margin-right: 50px;
 }
 .footer__inner{
@@ -490,4 +543,198 @@ body{
     line-height: 144%;
     color: #000000;
     margin-right: 50px;
+}
+.social__links{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.social__link{
+    margin-left: 20px;
+}
+
+/* MEDIA-------------------------------------------- */
+@media (max-width: 1170px) {
+    .form__search{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .tabs__content {
+        flex-wrap: wrap;
+    }
+    .tabs__card{
+        width: 50%;
+        max-width: calc(50% - 37px);
+    }
+    .benefits__items {
+        flex-wrap: wrap;
+    }
+    .benefits__item {
+        width: 50%;
+        max-width: calc(50% - 60px);
+        margin-bottom: 30px;
+    }
+
+@media (max-width: 890px) {
+    .delivery-week__card{
+        width: 50%;
+        max-width: calc(50% - 23px);
+    }
+}
+
+@media (max-width: 800px) {
+    .slide {
+        padding: 40px 50px;
+    }
+    .footer__inner{
+        flex-direction: column;
+    }
+    .social__links {
+        margin-left: 0;
+    }
+    .social__link:nth-child(1){
+        margin-left: 0px;
+    }
+    .footer__logo{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .footer__link{
+        margin-bottom: 20px;
+    }
+    .footer__link:nth-child(2){
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .form__search{
+        margin-left: 0px;
+        margin-right: 10px;
+    }
+    .slide__title {
+        font-size: 45px;
+    }
+    .promo__inner{
+        flex-wrap: wrap;
+        margin: 0 0 -30px 0;
+    }
+    .promo__item{
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 30px 0;
+    }
+    .delivery-week,
+    .promo {
+        padding: 30px 0;
+    }
+    .benefits {
+        padding: 50px 0 50px;
+    }
+}
+
+@media (max-width: 630px) {
+    .header__container{
+        flex-wrap: wrap;
+    }
+    .logo{
+        margin-bottom: 5px;
+    }
+    .form__search{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .slide__content{
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 540px) {
+    .tabs__card{
+        width: 100%;
+        max-width: 100%;
+    }
+    .tabs {
+        flex-wrap: wrap;
+    }
+    .tabs__link{
+        margin-right: 25px;
+        margin-bottom: 10px;
+    }
+    .benefits__item {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+    .slider__buttons{
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        width: 90px;
+    }
+}
+
+@media (max-width: 500px) {
+    .slide__title {
+        font-size: 40px;
+    }
+    .slide__text {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .slider__btn {
+        font-size: 12px;
+        padding: 12px 35px;
+    }
+    .delivery-week__card{
+        width: 100%;
+        max-width: 100%;
+    }
+    .delivery-week__title {
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+    .category {
+        padding: 40px 0 40px;
+    }
+    .category__title,
+    .benefits__title {
+        font-size: 25px;
+    }
+    .tabs {
+        padding: 30px 0 32px;
+    }
+    .benefits__title {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    .slide__title {
+        font-size: 30px;
+    }
+    .slide__text {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .slider__btn {
+        font-size: 12px;
+        padding: 12px 35px;
+    }
+}
+
+@media (max-width: 340px) {
+    .tabs-more__btn {
+        font-size: 13px;
+        margin: 40px auto 0;
+    }
+    .footer__nav{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .footer__link{
+        margin-right: 0px;
+        display: block;
+        margin: 5px auto;
+    }
 }
